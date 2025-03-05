@@ -8,3 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.getElementById('price-estimator').addEventListener('click', function() {
+    window.location.href = './price.html';
+});

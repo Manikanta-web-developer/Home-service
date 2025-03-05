@@ -6,8 +6,12 @@ font-family: Arial, sans-serif;
 }
 
 header {
+    position: fixed;
+    top: 0;
     width: 100%;
     height: fit-content;
+    z-index: 1000; /* Ensure the header is above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -96,6 +100,8 @@ header .contact-info {
 }
 
 .container {
+    position: relative;
+    top: 80px;
     background: #fff;
     display: flex;
     flex-wrap: wrap; /* Allows wrapping if needed */
@@ -164,6 +170,7 @@ header .contact-info {
 .services h2 {
     font-size: 36px;
     margin-bottom: 40px;
+    margin-top: 60px;
 }
 .process-container {
     display: flex;
@@ -230,6 +237,7 @@ header .contact-info {
 .features-container h2 {
     font-size: 36px;
     margin-bottom: 40px;
+    margin-top: 30px;
 }
 
 .features-container {
@@ -327,13 +335,14 @@ header .contact-info {
 }
 .review{
     padding: 50px 20px;
-    background-image: linear-gradient(to bottom, #ffffff, #f4f4f5, #e8eaeb, #dde0e1, #d1d6d6);;
+    background-image: linear-gradient(to bottom, #ffffff, #f4f4f5, #e8eaeb, #dde0e1, #d1d6d6);
     text-align: center;
 }
 .review h2 {
         font-size: 32px;
         color: #333;
         margin-bottom: 10px;
+        margin-top: 20px;
     }
 
 .testimonial {
@@ -393,157 +402,122 @@ header .contact-info {
     }
 }
 
-.process {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #fff3e0;
+.image1{
+    background-image: linear-gradient(to bottom, #d1d6d6, #dde0e1, #e8eaeb, #f4f4f5, #ffffff);
 }
 
-.process-steps {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-
-.step {
-    width: 30%;
-}
-
-.about{
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #e0f7fa;
-}
-
-.features {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f8f8f8;
-}
-
-.feature-list {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-
-.feature-item {
-    width: 30%;
-}
-
-.stats {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 20px;
-    background-color: #e0f7fa;
-}
-
-.stat-item {
-    text-align: center;
-}
-
-.cleaning-process {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #fff3e0;
-}
-
-.estimate-form {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f8f8f8;
-}
-
-.estimate-form form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.estimate-form .form-group {
-    margin-bottom: 20px;
-}
-
-.estimate-form label {
+.img1 {
     display: block;
-    margin-bottom: 5px;
+    margin: 0 auto;
+    height: 100px;
+    width: 250px;
+}
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image:linear-gradient(to bottom, #ffffff, #f4f4f5, #e8eaeb, #dde0e1, #d1d6d6);
+    
 }
 
-.estimate-form input, .estimate-form select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.estimate-form button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.satisfaction-guarantee {
-    margin-top: 30px;
-}
-
-.goal {
+.services-container {
+    padding: 50px 10%;
+    background-color: none;
     text-align: center;
-    padding: 50px 20px;
-    background-color: #e0f7fa;
 }
 
-.services-list {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #fff3e0;
+.services-container h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .services-columns {
     display: flex;
     justify-content: space-around;
-    margin-top: 30px;
 }
 
 .column {
-    width: 45%;
+    flex: 1;
+    margin: 0 20px;
 }
 
-.contact-info {
+.column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.column ul li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.contact-container, .newsletter-container, .working-hours-container ,.company-container{
+    padding: 50px 10%;
+    background-color: none;
     text-align: center;
-    padding: 50px 20px;
-    background-color: #f8f8f8;
 }
 
-.newsletter {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #e0f7fa;
+.contact-container h2, .newsletter-container h2, .working-hours-container h2 ,.company-container h2{
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-.newsletter input {
+.contact-container p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.company-container{
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.newsletter-container form {
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter-container input {
     padding: 10px;
-    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     margin-right: 10px;
 }
 
-.newsletter button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+.newsletter-container button {
+    background-color: #007BFF;
     border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 20px;
     cursor: pointer;
 }
 
-.working-hours {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #fff3e0;
+.working-hours-container p {
+    font-size: 16px;
+    color: #666;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #f8f8f8;
-    margin-top: 50px;
+    background-color: #000;
+    color: white;
+    border-radius: 10px 10px 0 0 ;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-columns {
+        flex-direction: column;
+    }
+
+    .column {
+        margin: 20px 0;
+    }
 }
